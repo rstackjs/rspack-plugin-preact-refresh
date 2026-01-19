@@ -121,8 +121,9 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
     compiler.hooks.thisCompilation.tap(NAME, (compilation) => {
       compilation.hooks.runtimeModule.tap(NAME, (runtimeModule) => {
         // rspack does not have addRuntimeModule and runtimeRequirements on js side
+        const name = runtimeModule.constructorName || runtimeModule.constructor?.name;
         if (
-          runtimeModule.constructorName === 'HotModuleReplacementRuntimeModule'
+          name === 'HotModuleReplacementRuntimeModule'
         ) {
           if (!runtimeModule.source) {
             throw new Error(
