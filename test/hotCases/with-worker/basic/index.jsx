@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import update from '../../update';
 import { App } from './app';
 
 const container = document.createElement('div');
@@ -15,14 +14,10 @@ root.render(
 
 new Worker(new URL('./worker.js', import.meta.url));
 
-it('should rerender jsx', (done) => {
+it('should rerender jsx',  async () => {
   expect(container.querySelector('span').textContent).toBe('content 1');
-  NEXT(
-    update(done, true, () => {
-      expect(container.querySelector('span').textContent).toBe('content 2');
-      done();
-    }),
-  );
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('content 2');
 });
 
 if (module.hot) {
