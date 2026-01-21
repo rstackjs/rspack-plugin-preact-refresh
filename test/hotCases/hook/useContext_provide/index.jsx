@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import update from '../../update';
 import { App } from './app';
 
 const container = document.createElement('div');
@@ -13,14 +12,10 @@ root.render(
   </div>,
 );
 
-it('should keep state', (done) => {
+it('should keep state', async () => {
   expect(container.querySelector('span').textContent).toBe('before: dark');
-  NEXT(
-    update(done, true, () => {
-      expect(container.querySelector('span').textContent).toBe('after: light');
-      done();
-    }),
-  );
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('after: light');
 });
 
 if (module.hot) {

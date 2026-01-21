@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import update from '../../update';
 import { App } from './app';
 
 const container = document.createElement('div');
@@ -13,19 +12,14 @@ root.render(
   </div>,
 );
 
-it('should rerender value', (done) => {
+it('should rerender value', async () => {
   expect(container.querySelector('span').textContent).toBe('content 1');
-  NEXT(
-    update(done, true, () => {
-      expect(container.querySelector('span').textContent).toBe('content 2');
-      NEXT(
-        update(done, true, () => {
-          expect(container.querySelector('span').textContent).toBe('content 3');
-          done();
-        }),
-      );
-    }),
-  );
+
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('content 2');
+
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('content 3');
 });
 
 if (module.hot) {

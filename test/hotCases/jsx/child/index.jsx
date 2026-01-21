@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import update from '../../update';
 import { App } from './app';
 
 const container = document.createElement('div');
@@ -13,21 +12,14 @@ root.render(
   </div>,
 );
 
-it('should rerender when children change', (done) => {
+it('should rerender when children change', async () => {
   expect(container.querySelector('span').textContent).toBe('no child');
-  NEXT(
-    update(done, true, () => {
-      expect(container.querySelector('span').textContent).toBe('has child');
-      NEXT(
-        update(done, true, () => {
-          expect(container.querySelector('span').textContent).toBe(
-            'child change',
-          );
-          done();
-        }),
-      );
-    }),
-  );
+
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('has child');
+
+  await NEXT_HMR();
+  expect(container.querySelector('span').textContent).toBe('child change');
 });
 
 if (module.hot) {

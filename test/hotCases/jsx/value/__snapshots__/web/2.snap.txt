@@ -6,7 +6,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 3839
+- Update: main.LAST_HASH.hot-update.js, size: 3952
 
 ## Manifest
 
@@ -41,9 +41,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../client/prefresh.js */ "../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
 
 function App() {
     var value = "content 3";
@@ -51,12 +51,12 @@ function App() {
         children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
             children: value
         }, void 0, false, {
-            fileName: "<ROOT>/test/hotCases/jsx/value/app.jsx",
+            fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/value/app.jsx",
             lineNumber: 3,
             columnNumber: 16
         }, this)
     }, void 0, false, {
-        fileName: "<ROOT>/test/hotCases/jsx/value/app.jsx",
+        fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/value/app.jsx",
         lineNumber: 3,
         columnNumber: 11
     }, this);
