@@ -52,7 +52,7 @@
     "@rstest/core": "^0.8.1",
     "@swc/helpers": "0.5.18",
     "@swc/plugin-prefresh": "^9.5.0",
-    "@types/node": "^22.19.7",
+    "@types/node": "^24.10.9",
     "cac": "^6.7.14",
     "cross-env": "^10.1.0",
     "execa": "9.6.1",
