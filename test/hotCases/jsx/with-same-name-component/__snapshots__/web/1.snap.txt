@@ -8,7 +8,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 16544
+- Update: main.LAST_HASH.hot-update.js, size: 15528
 
 ## Manifest
 
@@ -37,32 +37,28 @@
 ```js
 "use strict";
 self["webpackHotUpdate"]("main", {
-"./app.jsx": 
-/*!*****************!*\
-  !*** ./app.jsx ***!
-  \*****************/
-(function (module, __webpack_exports__, __webpack_require__) {
+"./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
-/* ESM import */var _child_a__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./child-a */ "./child-a.jsx");
-/* ESM import */var _child_b__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./child-b */ "./child-b.jsx");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var _child_a__rspack_import_1 = __webpack_require__("./child-a.jsx");
+/* import */ var _child_b__rspack_import_2 = __webpack_require__("./child-b.jsx");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 
 
 function App() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_child_a__WEBPACK_IMPORTED_MODULE_1__.ChildA, {}, void 0, false, {
+            /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(_child_a__rspack_import_1.ChildA, {}, void 0, false, {
                 fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/app.jsx",
                 lineNumber: 7,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_child_b__WEBPACK_IMPORTED_MODULE_2__.ChildB, {}, void 0, false, {
+            /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(_child_b__rspack_import_2.ChildB, {}, void 0, false, {
                 fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/app.jsx",
                 lineNumber: 8,
                 columnNumber: 7
@@ -152,22 +148,18 @@ if (moduleHot) {
   }
 }
 
-}),
-"./child-a.jsx": 
-/*!*********************!*\
-  !*** ./child-a.jsx ***!
-  \*********************/
-(function (module, __webpack_exports__, __webpack_require__) {
+},
+"./child-a.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   ChildA: () => (ChildA)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 function SameNameComponent() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         children: "same name component in component-a"
     }, void 0, false, {
         fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/child-a.jsx",
@@ -177,9 +169,9 @@ function SameNameComponent() {
 }
 _c = SameNameComponent;
 function ChildA() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         className: "component-a",
-        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SameNameComponent, {}, void 0, false, {
+        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(SameNameComponent, {}, void 0, false, {
             fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/child-a.jsx",
             lineNumber: 6,
             columnNumber: 41
@@ -269,26 +261,22 @@ if (moduleHot) {
   }
 }
 
-}),
-"./child-b.jsx": 
-/*!*********************!*\
-  !*** ./child-b.jsx ***!
-  \*********************/
-(function (module, __webpack_exports__, __webpack_require__) {
+},
+"./child-b.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   ChildB: () => (ChildB)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
-/* ESM import */var _same_name_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./same-name-component */ "./same-name-component.jsx");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var _same_name_component__rspack_import_1 = __webpack_require__("./same-name-component.jsx");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 
 function ChildB() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         className: "component-b",
-        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_same_name_component__WEBPACK_IMPORTED_MODULE_1__.SameNameComponent, {}, void 0, false, {
+        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(_same_name_component__rspack_import_1.SameNameComponent, {}, void 0, false, {
             fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/child-b.jsx",
             lineNumber: 4,
             columnNumber: 41
@@ -377,22 +365,18 @@ if (moduleHot) {
   }
 }
 
-}),
-"./same-name-component.jsx": 
-/*!*********************************!*\
-  !*** ./same-name-component.jsx ***!
-  \*********************************/
-(function (module, __webpack_exports__, __webpack_require__) {
+},
+"./same-name-component.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   SameNameComponent: () => (SameNameComponent)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 function SameNameComponent() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         children: "same name component in component-b"
     }, void 0, false, {
         fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/same-name-component.jsx",
@@ -478,7 +462,7 @@ if (moduleHot) {
   }
 }
 
-}),
+},
 
 },function(__webpack_require__) {
 // webpack/runtime/get_full_hash

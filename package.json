@@ -46,7 +46,7 @@
     "@prefresh/core": "^1.5.9",
     "@prefresh/utils": "^1.2.1",
     "@rslib/core": "^0.19.4",
-    "@rspack/core": "npm:@rspack-canary/core@1.5.8-canary-f37fe028-20250928065933",
+    "@rspack/core": "^1.7.4",
     "@rspack/test-tools": "1.7.4",
     "wast-loader": "^1.14.1",
     "@rstest/core": "^0.8.1",

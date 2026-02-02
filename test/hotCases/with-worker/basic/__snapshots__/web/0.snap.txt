@@ -5,6 +5,7 @@
 
 ## Asset Files
 - Bundle: bundle.js
+- Bundle: vendors-node_modules_pnpm_prefresh_core_1_5_9_preact_10_28_3_node_modules_prefresh_core_src_i-17adbe.chunk.CURRENT_HASH.js
 - Bundle: worker_js.chunk.CURRENT_HASH.js
 
 ## Manifest
