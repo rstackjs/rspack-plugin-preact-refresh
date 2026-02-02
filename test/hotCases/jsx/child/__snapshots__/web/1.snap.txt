@@ -7,7 +7,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 7481
+- Update: main.LAST_HASH.hot-update.js, size: 7051
 
 ## Manifest
 
@@ -34,24 +34,20 @@
 ```js
 "use strict";
 self["webpackHotUpdate"]("main", {
-"./app.jsx": 
-/*!*****************!*\
-  !*** ./app.jsx ***!
-  \*****************/
-(function (module, __webpack_exports__, __webpack_require__) {
+"./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
-/* ESM import */var _child__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./child */ "./child.jsx");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var _child__rspack_import_1 = __webpack_require__("./child.jsx");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 
 function App() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_child__WEBPACK_IMPORTED_MODULE_1__.Child, {}, void 0, false, {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(_child__rspack_import_1.Child, {}, void 0, false, {
             fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/child/app.jsx",
             lineNumber: 4,
             columnNumber: 16
@@ -140,22 +136,18 @@ if (moduleHot) {
   }
 }
 
-}),
-"./child.jsx": 
-/*!*******************!*\
-  !*** ./child.jsx ***!
-  \*******************/
-(function (module, __webpack_exports__, __webpack_require__) {
+},
+"./child.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   Child: () => (Child)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 function Child() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         children: "has child"
     }, void 0, false, {
         fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/child/child.jsx",
@@ -241,7 +233,7 @@ if (moduleHot) {
   }
 }
 
-}),
+},
 
 },function(__webpack_require__) {
 // webpack/runtime/get_full_hash

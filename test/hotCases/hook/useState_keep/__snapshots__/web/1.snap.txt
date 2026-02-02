@@ -6,7 +6,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 4779
+- Update: main.LAST_HASH.hot-update.js, size: 4457
 
 ## Manifest
 
@@ -32,30 +32,26 @@
 ```js
 "use strict";
 self["webpackHotUpdate"]("main", {
-"./app.jsx": 
-/*!*****************!*\
-  !*** ./app.jsx ***!
-  \*****************/
-(function (module, __webpack_exports__, __webpack_require__) {
+"./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* ESM import */var _swc_helpers_sliced_to_array__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @swc/helpers/_/_sliced_to_array */ "../../../../../../../node_modules/<PNPM_INNER>/@swc/helpers/esm/_sliced_to_array.js");
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
-/* ESM import */var preact_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! preact/hooks */ "../../../../../../../node_modules/<PNPM_INNER>/preact/hooks/dist/hooks.module.js");
+/* import */ var _swc_helpers_sliced_to_array__rspack_import_2 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/@swc/helpers/esm/_sliced_to_array.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var preact_hooks__rspack_import_1 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/hooks/dist/hooks.module.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 
 var _s = $RefreshSig$();
 
 function App() {
     _s();
-    var _useState = (0,_swc_helpers_sliced_to_array__WEBPACK_IMPORTED_MODULE_2__._)((0,preact_hooks__WEBPACK_IMPORTED_MODULE_1__.useState)('light'), 2), theme = _useState[0], setTheme = _useState[1];
-    (0,preact_hooks__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect)(function() {}, []);
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    var _useState = (0,_swc_helpers_sliced_to_array__rspack_import_2._)((0,preact_hooks__rspack_import_1.useState)('light'), 2), theme = _useState[0], setTheme = _useState[1];
+    (0,preact_hooks__rspack_import_1.useLayoutEffect)(function() {}, []);
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
             children: [
                 "after: ",
                 theme
@@ -150,7 +146,7 @@ if (moduleHot) {
   }
 }
 
-}),
+},
 
 },function(__webpack_require__) {
 // webpack/runtime/get_full_hash

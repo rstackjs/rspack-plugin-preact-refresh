@@ -8,7 +8,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 4538
+- Update: main.LAST_HASH.hot-update.js, size: 4317
 
 ## Manifest
 
@@ -34,21 +34,17 @@
 ```js
 "use strict";
 self["webpackHotUpdate"]("main", {
-"./child-a.jsx": 
-/*!*********************!*\
-  !*** ./child-a.jsx ***!
-  \*********************/
-(function (module, __webpack_exports__, __webpack_require__) {
+"./child-a.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   ChildA: () => (ChildA)
 });
-/* ESM import */var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ "../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
-/* provided dependency */ var __prefresh_utils__ = __webpack_require__(/*! ../../../../../../../client/prefresh.js */ "../../../../../../../client/prefresh.js")["default"];
+/* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
 function SameNameComponent() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         children: "same name component in component-a"
     }, void 0, false, {
         fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/child-a.jsx",
@@ -58,11 +54,11 @@ function SameNameComponent() {
 }
 _c = SameNameComponent;
 function ChildA() {
-    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)("span", {
+    return /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)("span", {
         className: "component-a",
         children: [
             'change ',
-            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SameNameComponent, {}, void 0, false, {
+            /*#__PURE__*/ (0,react_jsx_dev_runtime__rspack_import_0.jsxDEV)(SameNameComponent, {}, void 0, false, {
                 fileName: "<TEST_ROOT>/test/js/temp/hot-snapshot/hotSnapshotCases-hotCases/jsx/with-same-name-component/child-a.jsx",
                 lineNumber: 6,
                 columnNumber: 52
@@ -153,7 +149,7 @@ if (moduleHot) {
   }
 }
 
-}),
+},
 
 },function(__webpack_require__) {
 // webpack/runtime/get_full_hash
