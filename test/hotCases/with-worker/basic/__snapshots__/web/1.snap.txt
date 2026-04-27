@@ -9,8 +9,8 @@
 - Bundle: worker_js.chunk.CURRENT_HASH.js
 - Manifest: [runtime of worker_js].LAST_HASH.hot-update.json, size: 33
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 3748
-- Update: worker_js.LAST_HASH.hot-update.js, size: 187
+- Update: main.LAST_HASH.hot-update.js, size: 3713
+- Update: worker_js.LAST_HASH.hot-update.js, size: 186
 
 ## Manifest
 
@@ -43,13 +43,13 @@
 #### Changed Content
 ```js
 "use strict";
-self["webpackHotUpdate"]("main", {
+self["rspackHotUpdate"]("main", {
 "./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
@@ -171,7 +171,7 @@ __webpack_require__.h = () => ("CURRENT_HASH")
 #### Changed Content
 ```js
 "use strict";
-self["webpackHotUpdate"]("worker_js", {},function(__webpack_require__) {
+self["rspackHotUpdate"]("worker_js", {},function(__webpack_require__) {
 // webpack/runtime/get_full_hash
 (() => {
 __webpack_require__.h = () => ("CURRENT_HASH")

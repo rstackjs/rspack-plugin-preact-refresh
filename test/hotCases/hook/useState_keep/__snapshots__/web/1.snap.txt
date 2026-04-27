@@ -6,7 +6,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 4457
+- Update: main.LAST_HASH.hot-update.js, size: 4354
 
 ## Manifest
 
@@ -31,15 +31,15 @@
 #### Changed Content
 ```js
 "use strict";
-self["webpackHotUpdate"]("main", {
+self["rspackHotUpdate"]("main", {
 "./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* import */ var _swc_helpers_sliced_to_array__rspack_import_2 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/@swc/helpers/esm/_sliced_to_array.js");
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
-/* import */ var preact_hooks__rspack_import_1 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/hooks/dist/hooks.module.js");
+/* import */ var _swc_helpers_sliced_to_array__rspack_import_2 = __webpack_require__("<PNPM_INNER>/@swc/helpers/esm/_sliced_to_array.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var preact_hooks__rspack_import_1 = __webpack_require__("<PNPM_INNER>/preact/hooks/dist/hooks.module.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
