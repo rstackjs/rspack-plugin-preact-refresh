@@ -8,7 +8,7 @@
 ## Asset Files
 - Bundle: bundle.js
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 15528
+- Update: main.LAST_HASH.hot-update.js, size: 15391
 
 ## Manifest
 
@@ -36,13 +36,13 @@
 #### Changed Content
 ```js
 "use strict";
-self["webpackHotUpdate"]("main", {
+self["rspackHotUpdate"]("main", {
 "./app.jsx"(module, __webpack_exports__, __webpack_require__) {
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   App: () => (App)
 });
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* import */ var _child_a__rspack_import_1 = __webpack_require__("./child-a.jsx");
 /* import */ var _child_b__rspack_import_2 = __webpack_require__("./child-b.jsx");
 /* module decorator */ module = __webpack_require__.hmd(module);
@@ -154,7 +154,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   ChildA: () => (ChildA)
 });
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
@@ -267,7 +267,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   ChildB: () => (ChildB)
 });
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* import */ var _same_name_component__rspack_import_1 = __webpack_require__("./same-name-component.jsx");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
@@ -371,7 +371,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
   SameNameComponent: () => (SameNameComponent)
 });
-/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("../../../../../../../node_modules/<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
+/* import */ var react_jsx_dev_runtime__rspack_import_0 = __webpack_require__("<PNPM_INNER>/preact/compat/jsx-dev-runtime.js");
 /* module decorator */ module = __webpack_require__.hmd(module);
 /* provided dependency */ var __prefresh_utils__ = __webpack_require__("../../../../../../../client/prefresh.js")["default"];
 
