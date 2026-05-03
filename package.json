@@ -43,14 +43,14 @@
     ]
   },
   "devDependencies": {
-    "@rslint/core": "^0.5.0",
+    "@rslint/core": "^0.5.1",
     "@prefresh/core": "^1.5.9",
     "@prefresh/utils": "^1.2.1",
     "@rslib/core": "^0.21.3",
-    "@rspack/core": "^2.0.0",
-    "@rspack/test-tools": "2.0.0",
+    "@rspack/core": "^2.0.1",
+    "@rspack/test-tools": "2.0.1",
     "wast-loader": "^1.14.1",
-    "@rstest/core": "^0.9.9",
+    "@rstest/core": "^0.9.10",
     "@swc/helpers": "0.5.21",
     "@swc/plugin-prefresh": "^12.9.0",
     "@types/node": "^24.12.2",
