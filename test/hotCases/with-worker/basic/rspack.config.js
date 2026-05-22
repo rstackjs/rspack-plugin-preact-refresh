@@ -53,5 +53,16 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    moduleIds: 'named',
+    chunkIds: 'named',
+    splitChunks: {
+      cacheGroups: {
+        defaultVendors: {
+          name: 'vendors',
+        },
+      },
+    },
+  },
   plugins: [new ReactRefreshRspackPlugin()],
 };
