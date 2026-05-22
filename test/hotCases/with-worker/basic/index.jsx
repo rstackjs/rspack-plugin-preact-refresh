@@ -12,9 +12,11 @@ root.render(
   </div>,
 );
 
-new Worker(new URL('./worker.js', import.meta.url));
+new Worker(
+  new URL(/* webpackChunkName: "worker" */ './worker.js', import.meta.url),
+);
 
-it('should rerender jsx',  async () => {
+it('should rerender jsx', async () => {
   expect(container.querySelector('span').textContent).toBe('content 1');
   await NEXT_HMR();
   expect(container.querySelector('span').textContent).toBe('content 2');
