@@ -50,7 +50,7 @@
     "@rspack/core": "^2.0.4",
     "@rspack/test-tools": "2.0.4",
     "wast-loader": "^1.14.1",
-    "@rstest/core": "^0.10.1",
+    "@rstest/core": "^0.10.2",
     "@swc/helpers": "0.5.21",
     "@swc/plugin-prefresh": "^12.10.0",
     "@types/node": "^24.12.4",
@@ -61,7 +61,7 @@
     "fs-extra": "11.3.5",
     "nano-staged": "^1.0.2",
     "preact": "^10.29.2",
-    "semver": "7.8.0",
+    "semver": "7.8.1",
     "simple-git-hooks": "^2.13.1",
     "typescript": "^6.0.3"
   },
@@ -69,7 +69,7 @@
     "@prefresh/core": "^1.5.0",
     "@prefresh/utils": "^1.2.0"
   },
-  "packageManager": "pnpm@11.2.1",
+  "packageManager": "pnpm@11.2.2",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
