@@ -1,67 +1,37 @@
-name: Release Full
+name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      tag:
-        type: choice
-        description: "Release Npm Tag"
-        required: true
-        default: "nightly"
-        options:
-          - alpha
-          - beta
-          - canary
-          - latest
-          - nightly
-          - rc
+  # Run `npm run bump` to bump the version and create a git tag.
+  push:
+    tags:
+      - 'v*'
 
-      dry_run:
-        type: boolean
-        description: "DryRun release"
-        required: true
-        default: false
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  # To publish packages with provenance
-  id-token: write
+  contents: read
+  id-token: write # Required for OIDC
 
 jobs:
-  release:
-    name: Release
-    environment: npm
+  publish:
     runs-on: ubuntu-latest
-
+    environment: npm
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-
-      - name: Install Pnpm
-        run: npm i -g corepack@latest --force && corepack enable
 
       - name: Setup Node.js
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: 24.15.0
-          cache: "pnpm"
 
-      # Update npm to the latest version to enable OIDC
-      - name: Update npm
+      - name: Setup Pnpm
         run: |
-          npm install -g npm@latest
-          npm --version
+          npm install -g corepack@latest --force
+          corepack enable
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm i
 
-      - name: Run Test
-        run: pnpm run test
-
-      - name: Dry run release to npm
-        if: inputs.dry_run
-        run: node scripts/release.mjs --dry-run --tag ${{ inputs.tag }}
-
-      - name: Release to npm
-        if: ${{ !inputs.dry_run }}
-        run: node scripts/release.mjs --tag ${{ inputs.tag }}
+      - name: Publish
+        run: pnpm stage publish --no-git-checks
