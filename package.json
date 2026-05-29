@@ -13,7 +13,6 @@
       "import": "./dist/index.js",
       "require": "./index.cjs"
     },
-    "./intercept": "./client/reactRefresh.js",
     "./prefresh": "./client/prefresh.js",
     "./package.json": "./package.json"
   },
