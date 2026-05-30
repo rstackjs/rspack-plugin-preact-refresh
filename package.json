@@ -21,7 +21,7 @@
     "dev": "rslib -w",
     "lint": "rslint --type-check",
     "format": "prettier --experimental-cli --write . && heading-case --write",
-    "prepare": "simple-git-hooks && npm run build",
+    "prepare": "simple-git-hooks",
     "test": "rstest",
     "testu": "rstest -u",
     "bump": "npx bumpp --no-push --no-tag --no-commit"
