@@ -5,15 +5,23 @@ import type {
   Compiler,
   RspackPluginInstance,
   RuleSetCondition,
+  RuleSetRule,
 } from '@rspack/core';
 
 const require = createRequire(import.meta.url);
 
 export interface IPreactRefreshRspackPluginOptions {
   /**
+   * Specifies which files should be processed by the Preact Refresh loader.
+   * This option is passed to the `builtin:preact-refresh-loader` as the `rule.test` condition.
+   * Works identically to Rspack's `rule.test` option.
+   * @default /\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/
+   */
+  test?: RuleSetCondition;
+  /**
    * Include files to be processed by the plugin.
-   * The value is the same as the `rule.test` option in Rspack.
-   * @default /\.([jt]sx?)$/
+   * The value is the same as the `rule.include` option in Rspack.
+   * @default undefined
    */
   include?: RuleSetCondition | null;
   /**
@@ -38,8 +46,12 @@ export interface IPreactRefreshRspackPluginOptions {
   preactPath?: string;
 }
 
-interface NormalizedPluginOptions extends IPreactRefreshRspackPluginOptions {
-  include: NonNullable<IPreactRefreshRspackPluginOptions['include']>;
+interface NormalizedPluginOptions extends Omit<
+  IPreactRefreshRspackPluginOptions,
+  'test' | 'include' | 'exclude' | 'preactPath'
+> {
+  test: NonNullable<IPreactRefreshRspackPluginOptions['test']>;
+  include: IPreactRefreshRspackPluginOptions['include'];
   exclude: NonNullable<IPreactRefreshRspackPluginOptions['exclude']>;
   preactPath: NonNullable<IPreactRefreshRspackPluginOptions['preactPath']>;
 }
@@ -57,13 +69,14 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
   name = NAME;
   private options: NormalizedPluginOptions;
 
-  constructor(options: IPreactRefreshRspackPluginOptions) {
+  constructor(options: IPreactRefreshRspackPluginOptions = {}) {
     this.options = {
-      include: options?.include ?? /\.([jt]sx?)$/,
-      exclude: options?.exclude ?? /node_modules/,
-      overlay: options?.overlay,
+      test: options.test ?? /\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/,
+      include: options.include,
+      exclude: options.exclude ?? /node_modules/,
+      overlay: options.overlay,
       preactPath:
-        options?.preactPath ?? dirname(require.resolve('preact/package.json')),
+        options.preactPath ?? dirname(require.resolve('preact/package.json')),
     };
   }
 
@@ -101,8 +114,8 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
       ...compiler.options.resolve.alias,
     };
 
-    compiler.options.module.rules.unshift({
-      include: this.options.include,
+    const refreshRule: RuleSetRule = {
+      test: this.options.test,
       exclude: {
         or: [
           this.options.exclude,
@@ -116,7 +129,14 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
         not: ['url'],
       },
       use: 'builtin:preact-refresh-loader',
-    });
+    };
+    if (
+      this.options.include !== null &&
+      typeof this.options.include !== 'undefined'
+    ) {
+      refreshRule.include = this.options.include;
+    }
+    compiler.options.module.rules.unshift(refreshRule);
 
     compiler.hooks.thisCompilation.tap(NAME, (compilation) => {
       compilation.hooks.runtimeModule.tap(NAME, (runtimeModule) => {
