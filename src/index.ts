@@ -143,4 +143,3 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
 }
 
 export { PreactRefreshRspackPlugin };
-export default PreactRefreshRspackPlugin;
