@@ -130,7 +130,10 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
       },
       use: 'builtin:preact-refresh-loader',
     };
-    if (this.options.include != null) {
+    if (
+      this.options.include !== null &&
+      typeof this.options.include !== 'undefined'
+    ) {
       refreshRule.include = this.options.include;
     }
     compiler.options.module.rules.unshift(refreshRule);
