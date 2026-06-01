@@ -88,12 +88,31 @@ export default {
 
 ## Options
 
+### test
+
+- Type: [Rspack.RuleSetCondition](https://rspack.rs/config/module-rules#condition)
+- Default: `/\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/`
+
+Specifies which files should be processed by the Preact Refresh loader. This option is passed to the `builtin:preact-refresh-loader` as the `rule.test` condition.
+
+Works identically to Rspack's [rule.test](https://rspack.rs/config/module-rules#rulestest) option.
+
+```js
+new PreactRefreshRspackPlugin({
+  test: [/\.jsx$/, /\.tsx$/],
+});
+```
+
 ### include
 
 - Type: [Rspack.RuleSetCondition](https://rspack.rs/config/module-rules#condition)
-- Default: `/\.([jt]sx?)$/`
+- Default: `undefined`
 
-Include files to be processed by the plugin. The value is the same as the `rule.test` option in Rspack.
+Explicitly includes files to be processed by the Preact Refresh loader. This option is passed to the `builtin:preact-refresh-loader` as the `rule.include` condition.
+
+Use this to limit processing to specific directories or file patterns.
+
+Works identically to Rspack's [rule.include](https://rspack.rs/config/module-rules#rulesinclude) option.
 
 ```js
 new PreactRefreshRspackPlugin({
