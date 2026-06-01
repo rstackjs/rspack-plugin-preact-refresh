@@ -36,12 +36,15 @@ The enabling of the [Preact Refresh](https://github.com/preactjs/prefresh) is di
 > In versions below 1.0.0, Rspack did not support preact refresh with `swc-loader`.
 
 ```js
-const PreactRefreshPlugin = require("@rspack/plugin-preact-refresh");
-const isDev = process.env.NODE_ENV === "development";
+import { createRequire } from 'node:module';
+import PreactRefreshPlugin from '@rspack/plugin-preact-refresh';
 
-module.exports = {
+const require = createRequire(import.meta.url);
+const isDev = process.env.NODE_ENV === 'development';
+
+export default {
   // ...
-  mode: isDev ? "development" : "production",
+  mode: isDev ? 'development' : 'production',
   module: {
     rules: [
       {
@@ -49,22 +52,22 @@ module.exports = {
         // exclude node_modules to avoid dependencies transformed by `@swc/plugin-prefresh`
         exclude: /node_modules/,
         use: {
-          loader: "builtin:swc-loader",
+          loader: 'builtin:swc-loader',
           options: {
             jsc: {
               experimental: {
                 plugins: [
                   [
                     // enable prefresh specific transformation
-                    require.resolve("@swc/plugin-prefresh"),
+                    require.resolve('@swc/plugin-prefresh'),
                     {
-                      library: ["preact-like-framework"], // the customizable preact name, default is `["preact", "preact/compat", "react"]`
+                      library: ['preact-like-framework'], // the customizable preact name, default is `["preact", "preact/compat", "react"]`
                     },
                   ],
                 ],
               },
               parser: {
-                syntax: "ecmascript",
+                syntax: 'ecmascript',
                 jsx: true,
               },
               transform: {
@@ -114,15 +117,18 @@ new PreactRefreshPlugin({
 ### preactPath
 
 - Type: `string`
-- Default: `path.dirname(require.resolve('preact/package.json'))`
+- Default: `path.dirname(require.resolve("preact/package.json"))`
 
 Path to the `preact` package.
 
 ```js
-const path = require("node:path");
+import path from 'node:path';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 new PreactRefreshPlugin({
-  preactPath: path.dirname(require.resolve("preact/package.json")),
+  preactPath: path.dirname(require.resolve('preact/package.json')),
 });
 ```
 
