@@ -1,4 +1,4 @@
-const ReactRefreshRspackPlugin = require('../../../..');
+const { default: ReactRefreshRspackPlugin } = require('../../../..');
 
 /** @type {import('@rspack/core').Configuration} */
 module.exports = {
@@ -6,8 +6,10 @@ module.exports = {
   target: 'web',
   context: __dirname,
   entry: './index.js',
-  plugins: [new ReactRefreshRspackPlugin({
-    exclude: /$^/,  // match nothing
-    include: /foo/,
-  })],
+  plugins: [
+    new ReactRefreshRspackPlugin({
+      exclude: /$^/, // match nothing
+      include: /foo/,
+    }),
+  ],
 };

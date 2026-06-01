@@ -5,15 +5,16 @@
   "license": "MIT",
   "description": "Preact refresh plugin for Rspack",
   "type": "module",
-  "main": "index.cjs",
+  "main": "./dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js"
     },
-    "./prefresh": "./client/prefresh.js",
+    "./prefresh": {
+      "import": "./client/prefresh.js"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -28,8 +29,7 @@
   },
   "files": [
     "client",
-    "dist",
-    "index.cjs"
+    "dist"
   ],
   "simple-git-hooks": {
     "pre-commit": "npx nano-staged"
