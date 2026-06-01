@@ -1,6 +1,4 @@
-const {
-  default: ReactRefreshRspackPlugin,
-} = require('../../../../dist/index.js');
+const { PreactRefreshRspackPlugin } = require('../../../../dist/index.js');
 
 /** @type {import('@rspack/core').Configuration} */
 module.exports = {
@@ -9,7 +7,7 @@ module.exports = {
   context: __dirname,
   entry: './index.js',
   plugins: [
-    new ReactRefreshRspackPlugin({
+    new PreactRefreshRspackPlugin({
       exclude: /$^/, // match nothing
       include: /foo/,
     }),

@@ -37,7 +37,7 @@ The enabling of the [Preact Refresh](https://github.com/preactjs/prefresh) is di
 
 ```js
 import { createRequire } from 'node:module';
-import PreactRefreshPlugin from '@rspack/plugin-preact-refresh';
+import { PreactRefreshRspackPlugin } from '@rspack/plugin-preact-refresh';
 
 const require = createRequire(import.meta.url);
 const isDev = process.env.NODE_ENV === 'development';
@@ -82,7 +82,7 @@ export default {
       },
     ],
   },
-  plugins: [isDev && new PreactRefreshPlugin()].filter(Boolean),
+  plugins: [isDev && new PreactRefreshRspackPlugin()].filter(Boolean),
 };
 ```
 
@@ -96,7 +96,7 @@ export default {
 Include files to be processed by the plugin. The value is the same as the `rule.test` option in Rspack.
 
 ```js
-new PreactRefreshPlugin({
+new PreactRefreshRspackPlugin({
   include: [/\.jsx$/, /\.tsx$/],
 });
 ```
@@ -109,7 +109,7 @@ new PreactRefreshPlugin({
 Exclude files from being processed by the plugin. The value is the same as the `rule.exclude` option in Rspack.
 
 ```js
-new PreactRefreshPlugin({
+new PreactRefreshRspackPlugin({
   exclude: [/node_modules/, /some-other-module/],
 });
 ```
@@ -127,7 +127,7 @@ import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 
-new PreactRefreshPlugin({
+new PreactRefreshRspackPlugin({
   preactPath: path.dirname(require.resolve('preact/package.json')),
 });
 ```
