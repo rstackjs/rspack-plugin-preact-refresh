@@ -27,7 +27,7 @@ export interface IPreactRefreshRspackPluginOptions {
   /**
    * Exclude files from being processed by the plugin.
    * The value is the same as the `rule.exclude` option in Rspack.
-   * @default /node_modules/
+   * @default /[\\/]node_modules[\\/]/
    */
   exclude?: RuleSetCondition | null;
   /**
@@ -73,7 +73,7 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
     this.options = {
       test: options.test ?? /\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/,
       include: options.include,
-      exclude: options.exclude ?? /node_modules/,
+      exclude: options.exclude ?? /[\\/]node_modules[\\/]/,
       overlay: options.overlay,
       preactPath:
         options.preactPath ?? dirname(require.resolve('preact/package.json')),
