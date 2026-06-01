@@ -5,6 +5,7 @@ import type {
   Compiler,
   RspackPluginInstance,
   RuleSetCondition,
+  RuleSetRule,
 } from '@rspack/core';
 
 const require = createRequire(import.meta.url);
@@ -113,9 +114,8 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
       ...compiler.options.resolve.alias,
     };
 
-    compiler.options.module.rules.unshift({
+    const refreshRule: RuleSetRule = {
       test: this.options.test,
-      include: this.options.include!,
       exclude: {
         or: [
           this.options.exclude,
@@ -129,7 +129,11 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
         not: ['url'],
       },
       use: 'builtin:preact-refresh-loader',
-    });
+    };
+    if (this.options.include != null) {
+      refreshRule.include = this.options.include;
+    }
+    compiler.options.module.rules.unshift(refreshRule);
 
     compiler.hooks.thisCompilation.tap(NAME, (compilation) => {
       compilation.hooks.runtimeModule.tap(NAME, (runtimeModule) => {
