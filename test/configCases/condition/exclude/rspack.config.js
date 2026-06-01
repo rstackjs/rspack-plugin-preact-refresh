@@ -1,4 +1,6 @@
-const { default: ReactRefreshRspackPlugin } = require('../../../..');
+const {
+  default: ReactRefreshRspackPlugin,
+} = require('../../../../dist/index.js');
 
 /** @type {import('@rspack/core').Configuration} */
 module.exports = {
