@@ -24,7 +24,7 @@
     "prepare": "simple-git-hooks",
     "test": "rstest",
     "testu": "rstest -u",
-    "bump": "npx bumpp --no-push --no-tag --no-commit"
+    "bump": "npx bumpp"
   },
   "files": [
     "client",
