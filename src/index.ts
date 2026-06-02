@@ -46,6 +46,11 @@ export type PluginOptions = {
   preactPath?: string;
 };
 
+/**
+ * @deprecated Use PluginOptions instead.
+ */
+export type IPreactRefreshRspackPluginOptions = PluginOptions;
+
 interface NormalizedPluginOptions extends Omit<
   PluginOptions,
   'test' | 'include' | 'exclude' | 'preactPath'
