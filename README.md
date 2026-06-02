@@ -8,6 +8,11 @@
 
 Preact refresh plugin for [Rspack](https://github.com/web-infra-dev/rspack).
 
+## Versions
+
+- `2.x`: For Rspack v2.
+- `1.x`: For Rspack v1, see [v1.x - README](https://github.com/rstackjs/rspack-plugin-preact-refresh/tree/v1.x?tab=readme-ov-file#rspackplugin-preact-refresh) for usage guide.
+
 ## Installation
 
 First you need to install the dependencies:
