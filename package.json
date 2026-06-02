@@ -58,7 +58,13 @@
   },
   "peerDependencies": {
     "@prefresh/core": "^1.5.0",
-    "@prefresh/utils": "^1.2.0"
+    "@prefresh/utils": "^1.2.0",
+    "@rspack/core": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@rspack/core": {
+      "optional": true
+    }
   },
   "packageManager": "pnpm@11.5.0",
   "publishConfig": {
