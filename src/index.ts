@@ -10,7 +10,7 @@ import type {
 
 const require = createRequire(import.meta.url);
 
-export interface IPreactRefreshRspackPluginOptions {
+export type PluginOptions = {
   /**
    * Specifies which files should be processed by the Preact Refresh loader.
    * This option is passed to the `builtin:preact-refresh-loader` as the `rule.test` condition.
@@ -44,16 +44,21 @@ export interface IPreactRefreshRspackPluginOptions {
    * @default `path.dirname(require.resolve('preact/package.json'))`
    */
   preactPath?: string;
-}
+};
+
+/**
+ * @deprecated Use PluginOptions instead.
+ */
+export type IPreactRefreshRspackPluginOptions = PluginOptions;
 
 interface NormalizedPluginOptions extends Omit<
-  IPreactRefreshRspackPluginOptions,
+  PluginOptions,
   'test' | 'include' | 'exclude' | 'preactPath'
 > {
-  test: NonNullable<IPreactRefreshRspackPluginOptions['test']>;
-  include: IPreactRefreshRspackPluginOptions['include'];
-  exclude: NonNullable<IPreactRefreshRspackPluginOptions['exclude']>;
-  preactPath: NonNullable<IPreactRefreshRspackPluginOptions['preactPath']>;
+  test: NonNullable<PluginOptions['test']>;
+  include: PluginOptions['include'];
+  exclude: NonNullable<PluginOptions['exclude']>;
+  preactPath: NonNullable<PluginOptions['preactPath']>;
 }
 
 const PREFRESH_CORE_PATH = require.resolve('@prefresh/core');
@@ -69,7 +74,7 @@ class PreactRefreshRspackPlugin implements RspackPluginInstance {
   name = NAME;
   private options: NormalizedPluginOptions;
 
-  constructor(options: IPreactRefreshRspackPluginOptions = {}) {
+  constructor(options: PluginOptions = {}) {
     this.options = {
       test: options.test ?? /\.(?:js|jsx|mjs|cjs|ts|tsx|mts|cts)$/,
       include: options.include,
