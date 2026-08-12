@@ -1,3 +1,14 @@
-import { defineConfig, ts } from '@rslint/core';
+import { defineConfig, globalIgnores, js, ts } from '@rslint/core';
 
-export default defineConfig([ts.configs.recommended]);
+export default defineConfig([
+  globalIgnores(['test/hotCases/**']),
+  js.configs.recommended,
+  ts.configs.recommended,
+  {
+    files: ['client/**/*', 'test/**/*'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'no-undef': 'off',
+    },
+  },
+]);
