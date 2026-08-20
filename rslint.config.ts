@@ -6,9 +6,14 @@ export default defineConfig([
   ts.configs.recommended,
   {
     files: ['client/**/*'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.rspack,
+      },
+    },
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
-      'no-undef': 'off',
     },
   },
   {
@@ -26,9 +31,7 @@ export default defineConfig([
   {
     files: ['test/configCases/**/*.js'],
     languageOptions: {
-      globals: {
-        __webpack_modules__: 'readonly',
-      },
+      globals: globals.rspack,
     },
   },
 ]);
