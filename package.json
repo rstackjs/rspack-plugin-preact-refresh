@@ -43,7 +43,7 @@
     "@prefresh/core": "^1.5.10",
     "@prefresh/utils": "^1.2.1",
     "@rslib/core": "^0.23.2",
-    "@rslint/core": "^0.8.0",
+    "@rslint/core": "^0.8.1",
     "@rspack/core": "^2.1.10",
     "@rspack/test-tools": "2.1.10",
     "@rstest/core": "^0.11.8",
