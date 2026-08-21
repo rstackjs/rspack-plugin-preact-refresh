@@ -10,13 +10,7 @@ export default defineConfig([
     },
   },
   {
-    files: ['client/**/*'],
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-    },
-  },
-  {
-    files: ['test/**/*'],
+    files: ['client/**/*', 'test/**/*'],
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
     },
