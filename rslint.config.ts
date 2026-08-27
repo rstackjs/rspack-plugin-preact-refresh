@@ -5,11 +5,6 @@ export default defineConfig([
   js.configs.recommended,
   ts.configs.recommended,
   {
-    rules: {
-      'no-undef': 'off',
-    },
-  },
-  {
     files: ['client/**/*', 'test/**/*'],
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
