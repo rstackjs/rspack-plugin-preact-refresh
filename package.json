@@ -17,43 +17,31 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "rslib",
-    "dev": "rslib -w",
-    "lint": "rslint --type-check",
-    "format": "prettier --experimental-cli --write . && heading-case --write",
-    "prepare": "simple-git-hooks",
-    "test": "rstest",
-    "testu": "rstest -u",
-    "bump": "npx bumpp"
+    "build": "rs lib",
+    "bump": "pnpx bumpp",
+    "check": "rs check --type-check",
+    "dev": "rs lib -w",
+    "format": "rs fmt",
+    "lint": "rs lint --type-check",
+    "prepare": "rs hooks",
+    "test": "rs test",
+    "testu": "rs test -u"
   },
   "files": [
     "client",
     "dist"
   ],
-  "simple-git-hooks": {
-    "pre-commit": "npx nano-staged"
-  },
-  "nano-staged": {
-    "*.{js,jsx,ts,tsx,mjs,cjs}": [
-      "rslint --type-check",
-      "prettier --experimental-cli --write"
-    ]
-  },
   "devDependencies": {
     "@prefresh/core": "^1.5.10",
     "@prefresh/utils": "^1.2.1",
-    "@rslib/core": "^0.23.2",
-    "@rslint/core": "^0.8.2",
     "@rspack/core": "^2.1.10",
     "@rspack/test-tools": "2.1.10",
-    "@rstest/core": "^0.11.8",
     "@swc/helpers": "0.5.23",
     "@swc/plugin-prefresh": "^12.19.0",
     "@types/node": "^24.13.3",
-    "nano-staged": "^1.0.2",
+    "heading-case": "^2.0.1",
     "preact": "^10.29.8",
-    "prettier": "^3.9.6",
-    "simple-git-hooks": "^2.13.1",
+    "rstack": "^0.7.2",
     "typescript": "^7.0.2"
   },
   "peerDependencies": {
