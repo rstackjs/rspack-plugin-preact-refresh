@@ -182,8 +182,8 @@ importers:
         specifier: 0.5.23
         version: 0.5.23
       '@swc/plugin-prefresh':
-        specifier: ^12.19.0
-        version: 12.19.0
+        specifier: ^14.0.0
+        version: 14.0.0
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
@@ -922,8 +922,8 @@ packages:
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
 
-  '@swc/plugin-prefresh@12.19.0':
-    resolution: {integrity: sha512-htUjmk3FxuNr4aL064vps7NW1tkFHm8M2CUieRbrkUMcvOQQeJaSsDJN2gwViR1p1xdsHCqb6IGWfYLHgIcwhw==}
+  '@swc/plugin-prefresh@14.0.0':
+    resolution: {integrity: sha512-5/rFVDn+n8BjM3I/gaQsOsv8nPlG+uawCedP2n4etbQbNBzNsMr49303TSvXr+vO0+4bFt4FJgnxYGUwb1NiAw==}
 
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
@@ -2491,7 +2491,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@swc/plugin-prefresh@12.19.0':
+  '@swc/plugin-prefresh@14.0.0':
     dependencies:
       '@swc/counter': 0.1.3
 
