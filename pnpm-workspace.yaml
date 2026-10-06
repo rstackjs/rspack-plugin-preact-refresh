@@ -9,6 +9,7 @@ minimumReleaseAgeExclude:
   - '@rspress/*'
   - '@rstackjs/*'
   - '@rstest/*'
+  - '@swc/plugin-prefresh@16.0.0'
   - '@typescript/*'
   - 'rsbuild-plugin-*'
   - rstack

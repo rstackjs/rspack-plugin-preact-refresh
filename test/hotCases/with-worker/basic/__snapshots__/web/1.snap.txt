@@ -9,7 +9,7 @@
 - Bundle: worker.chunk.CURRENT_HASH.js
 - Manifest: [runtime of worker].LAST_HASH.hot-update.json, size: 30
 - Manifest: main.LAST_HASH.hot-update.json, size: 28
-- Update: main.LAST_HASH.hot-update.js, size: 3713
+- Update: main.LAST_HASH.hot-update.js, size: 3719
 - Update: worker.LAST_HASH.hot-update.js, size: 183
 
 ## Manifest
@@ -132,7 +132,7 @@ if (moduleHot) {
       data.moduleExports = __prefresh_utils__.getExports(module);
     });
 
-    moduleHot.accept(function errorRecovery() {
+    moduleHot.accept(function errorRecovery(error) {
       if (
         typeof __prefresh_errors__ !== 'undefined' &&
         __prefresh_errors__ &&
@@ -145,6 +145,7 @@ if (moduleHot) {
     });
   }
 }
+
 
 },
 
