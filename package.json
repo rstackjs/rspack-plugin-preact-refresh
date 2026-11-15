@@ -37,7 +37,7 @@
     "@rspack/core": "^2.3.2",
     "@rspack/test-tools": "2.3.2",
     "@swc/helpers": "0.5.24",
-    "@swc/plugin-prefresh": "^17.0.0",
+    "@swc/plugin-prefresh": "^18.0.2",
     "@types/node": "^24.19.2",
     "heading-case": "^2.0.3",
     "preact": "^10.29.8",
